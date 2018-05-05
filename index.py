@@ -49,12 +49,6 @@ class WeixinInterface:
                 return self.render.reply_text(fromUser,toUser,int(time.time()),u"http://1095f1f.nat123.cc:10834/myblog/info1.html")
             elif content==u'个人博客':
                 return self.render.reply_text(fromUser,toUser,int(time.time()),u"http://1095f1f.nat123.cc:10834/myblog/index.html")
-            elif content[:2]==u'电影':
-                flist=content.split(' ')
-                return self.render.reply_text(fromUser,toUser,int(time.time()),film(flist[1]))
-            elif content[:2]==u'歌曲':
-                slist=content.split(' ')
-                return self.render.reply_text(fromUser,toUser,int(time.time()),song(slist[-1]))
             elif content[:2]==u'帮助':
                 return self.render.reply_text(fromUser,toUser,int(time.time()),content)
             elif content[:2]==u'维基':
